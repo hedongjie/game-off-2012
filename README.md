@@ -35,3 +35,4 @@ Build up your network of branches, collecting friends as you go. Win by collecti
 * Art/Design/Development - Henry Hoffman (http://www.henryhoffman.com/)
 * Music: Holzweg - Faith (http://www.jamendo.com/en/track/90521/faith)
 * Pop sound: Ch0cchi (http://www.freesound.org/people/Ch0cchi/sounds/15348/)
+* Font: Later On (http://www.dafont.com/later-on.font)
