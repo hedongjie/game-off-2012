@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <include>Global</include>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" type="NarrativeText">
+                    <param id="0" name="Family name">&quot;later_onregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;webfont.css&quot;</param>
+                </action>
+                <action id="0" name="Set cursor style" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+                <action id="-3" name="Create object" type="System">
+                    <param id="0" name="Object to create">Texture</param>
+                    <param id="1" name="Layer">&quot;Overlay&quot;</param>
+                    <param id="2" name="X">(ViewportRight(&quot;Overlay&quot;) + ViewportLeft(&quot;Overlay&quot;)) /2</param>
+                    <param id="3" name="Y">(ViewportTop(&quot;Overlay&quot;) + ViewportBottom(&quot;Overlay&quot;)) /2</param>
+                </action>
+                <action id="-3" name="Create object" type="System">
+                    <param id="0" name="Object to create">WhiteFader</param>
+                    <param id="1" name="Layer">&quot;Overlay&quot;</param>
+                    <param id="2" name="X">(ViewportRight(1)+ViewportLeft(1))/2</param>
+                    <param id="3" name="Y">(ViewportTop(1)+ViewportBottom(1))/2</param>
+                </action>
+                <action id="-7" name="Set size" type="WhiteFader">
+                    <param id="0" name="Width">640</param>
+                    <param id="1" name="Height">480</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On click" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="WhiteFader">
+                    <param id="0" name="Instance variable">FadeOut</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" type="WhiteFader">
+                    <param id="0" name="Instance variable">FadeIn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set cursor style" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-10" name="Compare opacity" type="WhiteFader">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Opacity">99</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" type="WhiteFader">
+                    <param id="0" name="Instance variable">FadeOut</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" type="System">
+                    <param id="0" name="Layout">Level1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" title="Music">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">tickcount</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Music&quot;</param>
+                            <param id="3" name="Loop">1</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;Music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-10" name="Set value" type="NarrativeText">
+                    <param id="0" name="Instance variable">FadeIn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="NarrativeText">
+                    <param id="0" name="Instance variable">FadeIn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" type="NarrativeText">
+                    <param id="0" name="Opacity">lerp(Self.Opacity, 100, 0.001*960*dt)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

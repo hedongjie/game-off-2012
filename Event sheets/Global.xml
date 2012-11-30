@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Global</name>
+    <events>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="WhiteFader">
+                    <param id="0" name="Instance variable">FadeIn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" type="WhiteFader">
+                    <param id="0" name="Opacity">lerp(Self.Opacity, 0, 0.01*(60*dt))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="WhiteFader">
+                    <param id="0" name="Instance variable">FadeIn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" type="WhiteFader">
+                    <param id="0" name="Opacity">lerp(Self.Opacity, 100, 0.1*(60*dt))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
