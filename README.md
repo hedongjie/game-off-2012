@@ -19,12 +19,16 @@ Build up your network of branches, collecting friends as you go. Win by collecti
 
 <img src="http://i.imgur.com/nXtbo.jpg" style="border:0;">
 
-
 ## Inspiration
 
 * World of Goo
 * Hohokum
 * Bridge Builder
+
+## Tools
+
+* Engine: Construct 2
+* Graphics: Photoshop
 
 ## Credits
 
